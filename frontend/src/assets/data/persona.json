@@ -1,0 +1,17 @@
+
+{
+    "persona": 
+        {
+           "fullName": "Naddia Marylyn",
+           "dateOfBirth": "19/02/1982",
+           "aboutMe": "Profesora de Ciencia Educativas y programadora. Con gran iniciativa, capacidad de autogestión y adaptación a ambientes cambiantes. Participacion en proyectos administrativos con referentes a la industria bancaria y de salud.",
+           "mail": "naddiamary@gmail.com",
+           "image":"assets/perfil.jpeg ",
+           "position": "Desarrolladora",
+           "ubicacion":"Buenos Aires (Argentina)"
+   
+         }
+           
+ }
+
+
