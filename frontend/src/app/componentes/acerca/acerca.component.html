@@ -88,7 +88,52 @@
                 <div class="barra">
                   <div class="progreso" style="--w:60%">60%</div>
                 </div>
-                <br><br>
+                <br><br><br><br>
+                <button *ngIf="usuarioAutenticado" class="button-addon2" data-bs-toggle="modal" data-bs-target="#modalAcerca">
+                  Editar Acerca</button>
+                  <!-- Modal -->
+<div class="modal fade" id="modalAcerca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar  Acerca</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form">
+
+          <div class="mb-3">
+            <label for="school" class="form-label">Centro de Estudio</label>
+            <input type="text" class="form-control" id="school" formControlName="school"  >
+            <div *ngIf="school?.invalid && school?.touched">
+              <div *ngIf="school?.errors?.['required']" class="text-danger">
+                 Estudio requerido.
+              </div>
+              <div *ngIf="school?.errors?.['minlength']"class="text-danger" >
+                  El Estudio requerido debe tener un mínimo de 5 caracteres.
+              </div>
+          </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="title" class="form-label">Título</label>
+            <input type="text" class="form-control" id="title" formControlName="title">
+          </div>
+
+          <div class="mb-3">
+            <label for="img" class="form-label">URL de la Imagen</label>
+            <input type="image" class="form-control" id="img" formControlName="img">
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cerrarModalAcerca" class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn-primary" (click)="guardarAcerca()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
               </div>
             </div> 
           </div>
