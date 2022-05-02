@@ -10,6 +10,7 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { ContactosComponent } from './componentes/contactos/contactos.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClientModule} from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,  
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

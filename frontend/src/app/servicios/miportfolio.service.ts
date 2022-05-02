@@ -13,4 +13,7 @@ export class MiportfolioService {
    obtenerDatosPersona():Observable<any>{
      return this.http.get('./assets/data/persona.json');
    }
+   obtenerDatosAcerca():Observable<any>{
+     return this.http.get('./assets/data/acerca.json')
+   }
 }

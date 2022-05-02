@@ -1,16 +1,37 @@
 
- <section id="acerca">
+ 
+  <section id="acerca">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-md-4 col-lg-4" style="background-color: #008080;">
         <div class="estudios">
           <h3>Estudios</h3>
-          <p id="estudio1"> <img src="assets/estudio1.png" alt=""> Argentina Programa</p>
-          <p id="estudio2"><img src="assets/estudios2.png" alt=""> UTN curso de Programacion</p>
-          <p id="estudio3"> <img src="assets/estudios3.jpg" alt=""> Instituto Nacional Monterrico</p>
-          <p id="estudio4"> <img src="assets/estudios4.jpg" alt=""> Ingles</p>
+
+          <div *ngFor="let item of acerca" class="row">
+            <div class="col-1">
+              <img src="assets/estudio1.png" alt="logo de Argentina Programa">
+            </div>
+            <div class="col-3">
+              <h5 id="estudios">{{item.school }}</h5> 
+              <p>{{item.title }}</p>
+              <p>{{item.start}} - {{item.end }}</p>
+            </div>       
+          </div>
+          
+         
+          
         </div>
         </div>
+
+
+
+
+
+
+
+
+
+
         <div class="col-12 col-md-4 col-lg-4" style="background-color: #0b96dc;">
          
         <div class="card referencia" style="width: 18rem;">
@@ -69,14 +90,7 @@
                 </div>
                 <br><br>
               </div>
-            </div>
-            
- <!-----Boton editar-->
- 
- 
- <!-----Boton editar-->
- 
- 
+            </div> 
           </div>
         </div>
         </div>

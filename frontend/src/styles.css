@@ -331,23 +331,30 @@
   *****/
   
   /************ACERCA**********/
-  
+  .estudios h5{
+    margin-left: 8rem;
+    margin-top: 2rem;
+  }
   .estudios h3{
     text-align: center;
     margin-top: 7rem;
     font-size: 40px;
   }
+  
   .estudios p{
-    margin-top: 3rem;
-    text-align: justify;
-    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-left: 8rem;
     font-family: var(--font);
-    font-size: 20px;
+    font-size: 15px;
   }
   .estudios img{
     width: 100px;
     border-radius: 8px;
+    margin-left: 1rem;
+    margin-top: 3rem;
   }
+
+
   .habilidades h2{
     margin-block-end: 3rem; 
   }
@@ -698,4 +705,10 @@
       
     }
   }
-  
+  .ng-valid:not(form).ng-touched {
+    border-left: 5px solid #42a948;
+}
+
+.ng-invalid:not(form).ng-touched {
+   border-left: 5px solid #a94442;
+}

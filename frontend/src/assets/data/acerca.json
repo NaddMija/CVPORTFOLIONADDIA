@@ -1,0 +1,41 @@
+
+{
+	"educacion": [
+		{
+			"school": "Argentina Programa",
+			"title": "Desarrolladora",
+			"img":"assets/estudio1.png",
+			"career": "Sistemas Computacionales",
+			"score": 0,
+			"start": "2021",
+			"end": "2022"
+		},
+                {
+			"school": "UTN",
+			"title": "Develover",
+			"img":"assets/estudio2.png",
+			"career": "Sistemas Computacionales",
+			"score": 0,
+			"start": "2020",
+			"end": "2021"
+		},
+		{
+			"school": "Instituto Nacional Monterrico",
+			"title": "Educación",
+			"img":"assets/estudio3.pjg",
+			"career": "Licenciado en Educación",
+			"score": 82,
+			"start": "2003",
+			"end": "2008"
+		},
+		{
+			"school": "CUI",
+			"title": "Idioma",
+			"img": "assets/estudio4.jpg",
+			"career": "Idioma",
+			"score": 0,
+			"start": "2020",
+			"end": "2021"
+		}
+	]
+}

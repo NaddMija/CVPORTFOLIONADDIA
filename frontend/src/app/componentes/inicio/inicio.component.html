@@ -21,13 +21,13 @@
           <img id="fot" class="img-fluid" src={{persona.image}} alt="foto de perfil">
           <p id="profesión"><strong>{{persona.position}}</strong> </p>
           
-          <!-----Boton editar-->
-      <!-- Button trigger modal -->
+          
+      <!-- Button trigger modal 
       <button type="button" class="button-addon2" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Editar
       </button>
       
-      <!-- Modal -->
+      <!-- Modal 
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -59,9 +59,62 @@
           </div>
         </div>
       </div>
-              
-          <!-----Boton editar-->
- 
+      --Boton editar-->
+
+      <!-----Boton editar-->
+      
+      <!-- Button trigger modal -->
+<button *ngIf="usuarioAutenticado" class="button-addon2" data-bs-toggle="modal" data-bs-target="#modalInicio">
+  Editar</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalInicio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Inicio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form">
+
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Nombre y Apellido</label>
+            <input type="text" class="form-control" id="fullName" formControlName="fullName"  >
+            <div *ngIf="fullName?.invalid && fullName?.touched">
+              <div *ngIf="fullName?.errors?.['required']" class="text-danger">
+                 Nombre y Apellido es requerido.
+              </div>
+              <div *ngIf="fullName?.errors?.['minlength']"class="text-danger" >
+                  El Nombre y Apellido debe tener un mínimo de 5 caracteres.
+              </div>
+          </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="aboutMe" class="form-label">Biografia</label>
+            <input type="text" class="form-control" id="aboutMe" formControlName="aboutMe">
+          </div>
+
+          <div class="mb-3">
+            <label for="position" class="form-label">Profesión</label>
+            <input type="text" class="form-control" id="position" formControlName="position">
+          </div>
+
+          <div class="mb-3">
+            <label for="url" class="form-label">URL de la Imagen</label>
+            <input type="text" class="form-control" id="url" formControlName="url">
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cerrarModalInicio" class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn-primary" (click)="guardarInicio()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
          </div>
         </div>
         </div>
