@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Persona } from 'src/app/entidades/persona';
 import { MiportfolioService } from 'src/app/servicios/miportfolio.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class InicioComponent implements OnInit {
       fullName:['',[Validators.required,Validators.minLength(5)]],
       aboutMe:['',[Validators.required,Validators.minLength(50)]],
       position:['',[Validators.required,Validators.minLength(5)]],
-      url:['https://',[Validators.required,Validators.pattern('https?://.+')]],
+      url:['https://',[Validators.required]],
     })
   }
   get fullName(){
@@ -31,14 +32,33 @@ export class InicioComponent implements OnInit {
 
   guardarInicio(){
      if(this.form.valid){
-      alert("Enviar los datos al servicio (servidor)");
-      this.form.reset();
-      document.getElementById("cerrarModalInicio")?.click();
+       let fullName=this.form.get("fullName")?.value;
+       let aboutMe=this.form.get("aboutMe")?.value;
+       let position=this.form.get("position")?.value;
+       let url=this.form.get("url")?.value;
+
+       let personaEditar= new Persona(fullName,aboutMe,position,url);
+       this.miServicio.editarDatosPersona(personaEditar).subscribe({
+        next: (data) =>{
+          this.persona=personaEditar;
+          this.form.reset();
+          document.getElementById("cerrarModalInicio")?.click();
+        },
+        error: (error) =>{
+          alert("Ups, no se pudo actualizar el registro.Por favor, intente nuevamente");
+        },
+       })
+      
      }
      else
      {
-       alert("Hay errores");
        this.form.markAllAsTouched();
      }
+  }
+  mostrarDatosInicio(){
+    this.form.get("fullName")?.setValue(this.persona.fullName);
+    this.form.get("aboutMe")?.setValue(this.persona.aboutMe);
+    this.form.get("position")?.setValue(this.persona.position);
+    this.form.get("url")?.setValue(this.persona.image);
   }
 }

@@ -1,17 +1,16 @@
-
 {
-    "persona": 
-        {
-           "fullName": "Naddia Mija Tello",
-           "dateOfBirth": "19/02/1982",
-           "aboutMe": "Soy una profesional con sólida trayectoria en áreas de administración, archivo y atención al cliente. He trabajado en proyectos referentes a la administración, procesamiento, y digitalización de documentos para grandes clientes del sector bancario y médico en Buenos Aires. Poseo muy buenas competencias y habilidades para la conformación de equipos de trabajo, orientados a la obtención de resultados. Con gran iniciativa, capacidad de autogestión y adaptación a ambientes cambiantes. Egresada como profesora en Educación Secundaria y ahora como Desarrolladora Full Stack gracias a Argentina Programa.",
-           "mail": "naddiamary@gmail.com",
-           "image":"assets/fotoperfil.png",
-           "position": "Profesora & Desarrolladora",
-           "ubicacion":"Buenos Aires (Argentina)"
-   
-         }
-           
- }
+  "persona": 
+      {
+         "fullName": "Naddia Mija Tello",
+         "dateOfBirth": "19/02/1982",
+         "aboutMe": "Soy una profesional con sólida trayectoria en áreas de administración, archivo y atención al cliente. He trabajado en proyectos referentes a la administración, procesamiento, y digitalización de documentos para grandes clientes del sector bancario y médico en Buenos Aires. Poseo muy buenas competencias y habilidades para la conformación de equipos de trabajo, orientados a la obtención de resultados. Con gran iniciativa, capacidad de autogestión y adaptación a ambientes cambiantes. Egresada como profesora en Educación Secundaria y ahora como Desarrolladora Full Stack gracias a Argentina Programa.",
+         "mail":"naddiamary@gmail.com",
+         "image":"assets/fotoperfil.png",
+         "position": "Profesora & Desarrolladora",
+         "ubicacion":"Buenos Aires (Argentina)"
+ 
+       }
+         
+}
 
 

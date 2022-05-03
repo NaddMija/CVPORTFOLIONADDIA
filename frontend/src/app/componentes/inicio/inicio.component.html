@@ -1,121 +1,121 @@
 
 <section id="inicio" class="home" style="background-image:url(assets/imagen1.jpg)" >
-    <div class="container-fluid">
-      <div class="row">
- 
-         <div class=" resena col-12 sm col-md-8 col-lg-8">
-          <div class="tarjeta " >
-            <div class="body">
-              <h1 id="nombre">{{persona.fullName}}</h1>
-              
-              <p id="bio">{{persona.aboutMe}}</p>
-              <div class="text-center pt-4 text-lg-left">
-                <a class="btn" href="assets/CV Naddia Mija 2020 new.docx" target="_blank" rel="noopener">DESCARGA MI CV</a>
-              </div>
-            </div>
-          </div>
-         
-          </div>
-         
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-          <img id="fot" class="img-fluid" src={{persona.image}} alt="foto de perfil">
-          <p id="profesión"><strong>{{persona.position}}</strong> </p>
-          
-          
-      <!-- Button trigger modal 
-      <button type="button" class="button-addon2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Editar
-      </button>
-      
-      <!-- Modal 
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Cambiar</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-            <div class="input-group mb-3">
-              <button class="btn" type="button" id="button-addon2" onclick="cambiarNombre()">Cambiar Nombre
-              </button>
-            </div>
-            <div class="input-group mb-3">
-              <button class="btn" type="button" id="button-addon2" onclick="cambiarBio()">Cambiar
-                Reseña
-              </button>
-            </div>
-            <div class="input-group mb-3">
-              <button class="btn" type="button" id="button-addon2" onclick="cambiarFot()">Cambiar
-                Imagen
-              </button>
-            </div>
-            <div class="input-group mb-3">
-              <button class="btn" type="button" id="button-addon2" onclick="cambiarProfesión()">Cambiar Profesión
-              </button>
-            </div>
-            </div>
+  <div class="container-fluid">
+    <div class="row">
+
+       <div class=" resena col-12 sm col-md-8 col-lg-8">
+        <div class="tarjeta " >
+          <div class="body">
+            <h1 id="nombre">{{persona.fullName}}</h1>
             
+            <p id="bio">{{persona.aboutMe}}</p>
+            <div class="text-center pt-4 text-lg-left">
+              <a class="btn" href="assets/CV Naddia Mija 2020 new.docx" target="_blank" rel="noopener">DESCARGA MI CV</a>
+            </div>
           </div>
         </div>
+       
+        </div>
+       
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <img id="fot" class="img-fluid" src={{persona.image}} alt="foto de perfil">
+        <p id="profesión"><strong>{{persona.position}}</strong> </p>
+        
+        
+    <!-- Button trigger modal 
+    <button type="button" class="button-addon2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Editar
+    </button>
+    
+    <!-- Modal 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cambiar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          <div class="input-group mb-3">
+            <button class="btn" type="button" id="button-addon2" onclick="cambiarNombre()">Cambiar Nombre
+            </button>
+          </div>
+          <div class="input-group mb-3">
+            <button class="btn" type="button" id="button-addon2" onclick="cambiarBio()">Cambiar
+              Reseña
+            </button>
+          </div>
+          <div class="input-group mb-3">
+            <button class="btn" type="button" id="button-addon2" onclick="cambiarFot()">Cambiar
+              Imagen
+            </button>
+          </div>
+          <div class="input-group mb-3">
+            <button class="btn" type="button" id="button-addon2" onclick="cambiarProfesión()">Cambiar Profesión
+            </button>
+          </div>
+          </div>
+          
+        </div>
       </div>
-      --Boton editar-->
+    </div>
+    --Boton editar-->
 
-      <!-----Boton editar-->
-      
-      <!-- Button trigger modal -->
-<button *ngIf="usuarioAutenticado" class="button-addon2" data-bs-toggle="modal" data-bs-target="#modalInicio">
-  Editar Inicio</button>
+    <!-----Boton editar-->
+    
+    <!-- Button trigger modal -->
+<button *ngIf="usuarioAutenticado" class="button-addon2" data-bs-toggle="modal" data-bs-target="#modalInicio" (click)="mostrarDatosInicio()">
+Editar Inicio</button>
 
 <!-- Modal -->
 <div class="modal fade" id="modalInicio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Inicio</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form [formGroup]="form">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Editar Inicio</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="form">
 
-          <div class="mb-3">
-            <label for="fullName" class="form-label">Nombre y Apellido</label>
-            <input type="text" class="form-control" id="fullName" formControlName="fullName"  >
-            <div *ngIf="fullName?.invalid && fullName?.touched">
-              <div *ngIf="fullName?.errors?.['required']" class="text-danger">
-                 Nombre y Apellido es requerido.
-              </div>
-              <div *ngIf="fullName?.errors?.['minlength']"class="text-danger" >
-                  El Nombre y Apellido debe tener un mínimo de 5 caracteres.
-              </div>
-          </div>
-          </div>
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Nombre y Apellido</label>
+          <input type="text" class="form-control" id="fullName" formControlName="fullName"  >
+          <div *ngIf="fullName?.invalid && fullName?.touched">
+            <div *ngIf="fullName?.errors?.['required']" class="text-danger">
+               Nombre y Apellido es requerido.
+            </div>
+            <div *ngIf="fullName?.errors?.['minlength']"class="text-danger" >
+                El Nombre y Apellido debe tener un mínimo de 5 caracteres.
+            </div>
+        </div>
+        </div>
 
-          <div class="mb-3">
-            <label for="aboutMe" class="form-label">Biografia</label>
-            <input type="text" class="form-control" id="aboutMe" formControlName="aboutMe">
-          </div>
+        <div class="mb-3">
+          <label for="aboutMe" class="form-label">Biografia</label>
+          <input type="text" class="form-control" id="aboutMe" formControlName="aboutMe">
+        </div>
 
-          <div class="mb-3">
-            <label for="position" class="form-label">Profesión</label>
-            <input type="text" class="form-control" id="position" formControlName="position">
-          </div>
+        <div class="mb-3">
+          <label for="position" class="form-label">Profesión</label>
+          <input type="text" class="form-control" id="position" formControlName="position">
+        </div>
 
-          <div class="mb-3">
-            <label for="url" class="form-label">URL de la Imagen</label>
-            <input type="text" class="form-control" id="url" formControlName="url">
-          </div>
+        <div class="mb-3">
+          <label for="url" class="form-label">URL de la Imagen</label>
+          <input type="text" class="form-control" id="url" formControlName="url">
+        </div>
 
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="cerrarModalInicio" class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn-primary" (click)="guardarInicio()">Guardar</button>
-      </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" id="cerrarModalInicio" class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      <button type="button" class="btn-primary" (click)="guardarInicio()">Guardar</button>
     </div>
   </div>
 </div>
-         </div>
-        </div>
-        </div>
-  </section>
+</div>
+       </div>
+      </div>
+      </div>
+</section>
