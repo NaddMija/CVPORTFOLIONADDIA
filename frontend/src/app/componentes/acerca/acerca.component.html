@@ -23,14 +23,6 @@
         </div>
 
 
-
-
-
-
-
-
-
-
         <div class="col-12 col-md-4 col-lg-4" style="background-color: #0b96dc;">
          
         <div class="card referencia" style="width: 18rem;">
@@ -87,6 +79,7 @@
                 <div class="barra">
                   <div class="progreso" style="--w:60%">60%</div>
                 </div>
+
                 <br><br><br><br>
                 <button *ngIf="usuarioAutenticado" class="button-addon2" data-bs-toggle="modal" data-bs-target="#modalAcerca">
                   Editar Acerca</button>
@@ -120,8 +113,12 @@
           </div>
 
           <div class="mb-3">
-            <label for="img" class="form-label">URL de la Imagen</label>
-            <input type="image" class="form-control" id="img" formControlName="img">
+            <label for="start" class="form-label">Año de Ingreso</label>
+            <input type="number" class="form-control" id="start" formControlName="start">
+          </div>
+          <div class="mb-3">
+            <label for="end" class="form-label">Año de Egreso</label>
+            <input type="number" class="form-control" id="end" formControlName="end">
           </div>
 
         </form>

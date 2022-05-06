@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Acerca } from '../entidades/acerca';
 import { Persona } from '../entidades/persona';
 
 @Injectable({
@@ -19,5 +20,8 @@ export class MiportfolioService {
    }
    editarDatosPersona(persona:Persona):Observable<any>{
      return this.http.post('http://localhost:3000/posts',persona);
+   }
+   editarDatosAcerca(acerca=Acerca):Observable<any>{
+     return this.http.post('http://localhost:3000/posts',acerca);
    }
 }

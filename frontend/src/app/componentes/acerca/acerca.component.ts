@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Acerca } from 'src/app/entidades/acerca';
 import { MiportfolioService } from 'src/app/servicios/miportfolio.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class AcercaComponent implements OnInit {
     this.form=this.miFormBuilder.group({
       school:['',[Validators.required,Validators.minLength(5)]],
       title:['',[Validators.required,Validators.minLength(5)]],
-      img:['https://',[Validators.required,Validators.pattern('https?://.+')]],
+      start:['',[Validators.required,Validators.min(4)]],
+      end:['',[Validators.required,Validators.min(4)]],
     })
   }
   get school(){
@@ -29,7 +31,17 @@ export class AcercaComponent implements OnInit {
   }
   guardarAcerca(){
     if(this.form.valid){
-     alert("Enviar los datos al servicio (servidor)");
+      let school=this.form.get("school")?.value;
+      let title=this.form.get("title")?.value;
+      let start=this.form.get("start")?.value;
+      let end=this.form.get("end")?.value;
+
+      let acercaEdit= new Acerca(school,title,start,end);
+     this.miServicio.editarDatosAcerca(acercaEdit).subscribe(data=>{
+     
+      //modificar los datos del componente con los datos ingresados por el usurio
+     this.acerca=Acerca;
+    })
      this.form.reset();
      document.getElementById("cerrarModalAcerca")?.click();
     }
