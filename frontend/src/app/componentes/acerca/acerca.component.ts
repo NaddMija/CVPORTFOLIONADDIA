@@ -36,8 +36,8 @@ export class AcercaComponent implements OnInit {
       let start=this.form.get("start")?.value;
       let end=this.form.get("end")?.value;
 
-      let acercaEdit= new Acerca(school,title,start,end);
-     this.miServicio.editarDatosAcerca(acercaEdit).subscribe(data=>{
+      let acerca= new Acerca(school,title,start,end);
+     this.miServicio.editarDatosAcerca(this.acerca).subscribe(data=>{
      
       //modificar los datos del componente con los datos ingresados por el usurio
      this.acerca=Acerca;
