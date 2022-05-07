@@ -11,6 +11,8 @@ import { ContactosComponent } from './componentes/contactos/contactos.component'
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +21,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     AcercaComponent,
     ProyectosComponent,
     ContactosComponent,
-    FooterComponent
+    FooterComponent,
+    IniciarSesionComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

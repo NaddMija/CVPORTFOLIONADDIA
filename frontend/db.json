@@ -87,7 +87,139 @@
         "start": "2020",
         "end": "2021"
       }
-    ]
+    ],
+    {
+      "fullName": "Naddia Mija Tello",
+      "aboutMe": "Soy una profesional con sólida trayectoria en áreas de administración, archivo y atención al cliente. He trabajado en proyectos referentes a la administración, procesamiento, y digitalización de documentos para grandes clientes del sector bancario y médico en Buenos Aires. Poseo muy buenas competencias y habilidades para la conformación de equipos de trabajo, orientados a la obtención de resultados. Con gran iniciativa, capacidad de autogestión y adaptación a ambientes cambiantes. Egresada como profesora en Educación Secundaria y ahora como Desarrolladora Full Stack gracias a Argentina Programa.",
+      "position": "Profesora & Desarrollador",
+      "image": "assets/fotoperfil.png",
+      "id": 9
+    },
+    {
+      "fullName": "Naddia Mija Tello",
+      "aboutMe": "Soy una profesional con sólida trayectoria en áreas de administración, archivo y atención al cliente. He trabajado en proyectos referentes a la administración, procesamiento, y digitalización de documentos para grandes clientes del sector bancario y médico en Buenos Aires. Poseo muy buenas competencias y habilidades para la conformación de equipos de trabajo, orientados a la obtención de resultados. Con gran iniciativa, capacidad de autogestión y adaptación a ambientes cambiantes. Egresada como profesora en Educación Secundaria y ahora como Desarrolladora Full Stack gracias a Argentina Programa.",
+      "position": "Profesora & Desarrolladora",
+      "image": "assets/fotoperfil.png",
+      "id": 10
+    },
+    [
+      {
+        "school": "Argentina Programa",
+        "title": "Desarrolladora",
+        "img": "assets/estudio1.png",
+        "career": "Sistemas Computacionales",
+        "score": 0,
+        "start": "2021",
+        "end": "2022"
+      },
+      {
+        "school": "UTN",
+        "title": "Develover",
+        "img": "assets/estudio2.png",
+        "career": "Sistemas Computacionales",
+        "score": 0,
+        "start": "2020",
+        "end": "2021"
+      },
+      {
+        "school": "Instituto Nacional Monterrico",
+        "title": "Educación",
+        "img": "assets/estudio3.pjg",
+        "career": "Licenciado en Educación",
+        "score": 82,
+        "start": "2003",
+        "end": "2008"
+      },
+      {
+        "school": "CUI",
+        "title": "Idioma",
+        "img": "assets/estudio4.jpg",
+        "career": "Idioma",
+        "score": 0,
+        "start": "2020",
+        "end": "2021"
+      }
+    ],
+    {
+      "fullName": "Naddia Mija Tello",
+      "aboutMe": "Soy una profesional con sólida trayectoria en áreas de administración, archivo y atención al cliente. He trabajado en proyectos referentes a la administración, procesamiento, y digitalización de documentos para grandes clientes del sector bancario y médico en Buenos Aires. Poseo muy buenas competencias y habilidades para la conformación de equipos de trabajo, orientados a la obtención de resultados. Con gran iniciativa, capacidad de autogestión y adaptación a ambientes cambiantes. Egresada como profesora en Educación Secundaria y ahora como Desarrolladora Full Stack gracias a Argentina Programa.",
+      "position": "Profesora & Desarrollador",
+      "image": "assets/fotoperfil.png",
+      "id": 12
+    },
+    {
+      "fullName": "Naddia Mija Tello",
+      "aboutMe": "Soy una profesional con sólida trayectoria en áreas de administración, archivo y atención al cliente. He trabajado en proyectos referentes a la administración, procesamiento, y digitalización de documentos para grandes clientes del sector bancario y médico en Buenos Aires. Poseo muy buenas competencias y habilidades para la conformación de equipos de trabajo, orientados a la obtención de resultados. Con gran iniciativa, capacidad de autogestión y adaptación a ambientes cambiantes. Egresada como profesora en Educación Secundaria y ahora como Desarrolladora Full Stack gracias a Argentina Programa.",
+      "position": "Profesora & Desarrolladora",
+      "image": "assets/fotoperfil.png",
+      "id": 13
+    },
+    [
+      {
+        "school": "Argentina Programa",
+        "title": "Desarrolladora",
+        "img": "assets/estudio1.png",
+        "career": "Sistemas Computacionales",
+        "score": 0,
+        "start": "2021",
+        "end": "2022"
+      },
+      {
+        "school": "UTN",
+        "title": "Develover",
+        "img": "assets/estudio2.png",
+        "career": "Sistemas Computacionales",
+        "score": 0,
+        "start": "2020",
+        "end": "2021"
+      },
+      {
+        "school": "Instituto Nacional Monterrico",
+        "title": "Educación",
+        "img": "assets/estudio3.pjg",
+        "career": "Licenciado en Educación",
+        "score": 82,
+        "start": "2003",
+        "end": "2008"
+      },
+      {
+        "school": "CUI",
+        "title": "Idioma",
+        "img": "assets/estudio4.jpg",
+        "career": "Idioma",
+        "score": 0,
+        "start": "2020",
+        "end": "2021"
+      }
+    ],
+    {
+      "fullName": "Naddia Mija Tell",
+      "aboutMe": "Soy una profesional con sólida trayectoria en áreas de administración, archivo y atención al cliente. He trabajado en proyectos referentes a la administración, procesamiento, y digitalización de documentos para grandes clientes del sector bancario y médico en Buenos Aires. Poseo muy buenas competencias y habilidades para la conformación de equipos de trabajo, orientados a la obtención de resultados. Con gran iniciativa, capacidad de autogestión y adaptación a ambientes cambiantes. Egresada como profesora en Educación Secundaria y ahora como Desarrolladora Full Stack gracias a Argentina Programa.",
+      "position": "Profesora & Desarrolladora",
+      "image": "assets/fotoperfil.png",
+      "id": 15
+    },
+    {
+      "fullName": "Naddia Mija Tello",
+      "aboutMe": "Soy una profesional con sólida trayectoria en áreas de administración, archivo y atención al cliente. He trabajado en proyectos referentes a la administración, procesamiento, y digitalización de documentos para grandes clientes del sector bancario y médico en Buenos Aires. Poseo muy buenas competencias y habilidades para la conformación de equipos de trabajo, orientados a la obtención de resultados. Con gran iniciativa, capacidad de autogestión y adaptación a ambientes cambiantes. Egresada como profesora en Educación Secundaria y ahora como Desarrolladora Full Stack gracias a Argentina Programa.",
+      "position": "Profesora & Desarrolladora",
+      "image": "assets/fotoperfil.png",
+      "id": 16
+    },
+    {
+      "fullName": "Naddia Mija Tell",
+      "aboutMe": "Soy una profesional con sólida trayectoria en áreas de administración, archivo y atención al cliente. He trabajado en proyectos referentes a la administración, procesamiento, y digitalización de documentos para grandes clientes del sector bancario y médico en Buenos Aires. Poseo muy buenas competencias y habilidades para la conformación de equipos de trabajo, orientados a la obtención de resultados. Con gran iniciativa, capacidad de autogestión y adaptación a ambientes cambiantes. Egresada como profesora en Educación Secundaria y ahora como Desarrolladora Full Stack gracias a Argentina Programa.",
+      "position": "Profesora & Desarrolladora",
+      "image": "assets/fotoperfil.png",
+      "id": 17
+    },
+    {
+      "fullName": "Naddia Mija Tello",
+      "aboutMe": "Soy una profesional con sólida trayectoria en áreas de administración, archivo y atención al cliente. He trabajado en proyectos referentes a la administración, procesamiento, y digitalización de documentos para grandes clientes del sector bancario y médico en Buenos Aires. Poseo muy buenas competencias y habilidades para la conformación de equipos de trabajo, orientados a la obtención de resultados. Con gran iniciativa, capacidad de autogestión y adaptación a ambientes cambiantes. Egresada como profesora en Educación Secundaria y ahora como Desarrolladora Full Stack gracias a Argentina Programa.",
+      "position": "Profesora & Desarrolladora",
+      "image": "assets/fotoperfil.png",
+      "id": 18
+    }
   ],
   "comments": [
     {
