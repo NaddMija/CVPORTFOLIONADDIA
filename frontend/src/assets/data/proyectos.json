@@ -1,0 +1,21 @@
+{
+	"proyectos": [
+		{
+			"card-title": "Diseño Gràfico",
+			"card-text": "Podemos crear la identidad corporativa de tu empresa. Diseño , Maquetación de folletos, Catálogos, Papelería y mucho más.",
+			"img":"assets/portfolio-4.jpg"
+			
+		},
+                {
+			"card-title": "Gestión de Redes",
+			"card-text": "Nosotros creamos y optimizamos tus perfiles en las Redes Sociales. Importantes para que tu presencia online seacompleta.",
+			"img":"assets/portfolio-5.jpg"
+		},
+		{
+			"card-title": "Desarrollo Web",
+			"card-text": "Creamos tu página web utilizando las últimas tecnologías disponibles. Una Web adaptativa a tu móvil o Tablet y con un gestor de contenido fácil.",
+			"img":"assets/portfolio-6.jpg"
+		}
+		
+	]
+}

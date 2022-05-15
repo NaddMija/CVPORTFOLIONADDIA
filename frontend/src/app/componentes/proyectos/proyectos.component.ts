@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MisProyectosService } from 'src/app/servicios/mis-proyectos.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-
-  constructor() { }
+  trabajos:any;
+  constructor(private miProyecto:MisProyectosService) { 
+  
+  }
 
   ngOnInit(): void {
   }

@@ -12,6 +12,7 @@ export class AcercaComponent implements OnInit {
    acerca:any;
    usuarioAutenticado:boolean=true;
    form:FormGroup;
+   idActual:any;
   constructor(private miServicio:MiportfolioService,private miFormBuilder:FormBuilder) {
     this.form=this.miFormBuilder.group({
       school:['',[Validators.required,Validators.minLength(5)]],
@@ -37,10 +38,10 @@ export class AcercaComponent implements OnInit {
       let end=this.form.get("end")?.value;
 
       let acerca= new Acerca(school,title,start,end);
-     this.miServicio.editarDatosAcerca(this.acerca).subscribe(data=>{
+     this.miServicio.editarDatosAcerca(this.acerca,this.idActual).subscribe(data=>{
      
       //modificar los datos del componente con los datos ingresados por el usurio
-     this.acerca=Acerca;
+     this.acerca=acerca;
     })
      this.form.reset();
      document.getElementById("cerrarModalAcerca")?.click();
@@ -50,5 +51,13 @@ export class AcercaComponent implements OnInit {
       alert("Hay errores");
       this.form.markAllAsTouched();
     }
+ }
+ mostrarAcerca(i:number){
+   this.form.get('school')?.setValue(this.acerca[i].school);
+   this.form.get('title')?.setValue(this.acerca[i].title);
+   this.form.get('start')?.setValue(this.acerca[i].start);
+   this.form.get('end')?.setValue(this.acerca[i].end);
+   this.form.get('edicionWeb')?.setValue(this.acerca[i].web);
+   this.idActual=this.acerca[i]['id'];
  }
 }

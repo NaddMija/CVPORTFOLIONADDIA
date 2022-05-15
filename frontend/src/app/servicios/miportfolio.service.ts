@@ -21,7 +21,8 @@ export class MiportfolioService {
    editarDatosPersona(persona:Persona):Observable<any>{
      return this.http.post('http://localhost:3000/posts',persona);
    }
-   editarDatosAcerca(acerca=Acerca):Observable<any>{
-     return this.http.post('http://localhost:3000/posts', acerca);
-   }
+   editarDatosAcerca(acerca:Acerca,id:number):Observable<any>{
+    return this.http.put('http://localhost:3000/educacion/'+id,
+    acerca);
+    }
 }

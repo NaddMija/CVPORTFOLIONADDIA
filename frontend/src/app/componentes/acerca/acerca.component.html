@@ -1,198 +1,281 @@
+<section> id="acerca">
+<div class="container-fluid">
+<div class="row">
+<div class="col-12 col-md-4 col-lg-4" style="background-color:
 
-  <section id="acerca">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-md-4 col-lg-4" style="background-color: #008080;">
-        <div class="estudios">
-          <h3>Estudios</h3>
+#008080;">
 
-          <div *ngFor="let item of acerca" class="row">
-            <div class="col-1">
-              <img src="assets/estudio1.png" alt="logo de Argentina Programa">
-            </div>
-            <div class="col-2">
-              <h5 id="estudios">{{item.school }}</h5> 
-              <p>{{item.title }}</p>
-              <p>{{item.start}} - {{item.end }}</p>
-            </div>  
-            <div class="col-1" style="margin-top: 4rem;" >
-              <button *ngIf="usuarioAutenticado" class="button-addon2" data-bs-toggle="modal" data-bs-target="#modalAcerca" style="width:6rem ; margin-left:15rem">
-                Editar</button>
-              
-<div class="modal fade" id="modalAcerca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Editar  Acerca</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body">
-      <form [formGroup]="form">
+<div class="estudios">
+<h3>Estudios</h3>
+<div *ngFor="let item of acerca" class="row">
+<div class="col-1">
+<img src="assets/estudio1.png" alt="logo de Argentina
 
-        <div class="mb-3">
-          <label for="school" class="form-label">Centro de Estudio</label>
-          <input type="text" class="form-control" id="school" formControlName="school"  >
-          <div *ngIf="school?.invalid && school?.touched">
-            <div *ngIf="school?.errors?.['required']" class="text-danger">
-               Estudio requerido.
-            </div>
-            <div *ngIf="school?.errors?.['minlength']"class="text-danger" >
-                El Estudio requerido debe tener un mínimo de 5 caracteres.
-            </div>
-        </div>
-        </div>
+Programa">
 
-        <div class="mb-3">
-          <label for="title" class="form-label">Título</label>
-          <input type="text" class="form-control" id="title" formControlName="title">
-        </div>
-
-        <div class="mb-3">
-          <label for="start" class="form-label">Año de Ingreso</label>
-          <input type="number" class="form-control" id="start" formControlName="start">
-        </div>
-        <div class="mb-3">
-          <label for="end" class="form-label">Año de Egreso</label>
-          <input type="number" class="form-control" id="end" formControlName="end">
-        </div>
-
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" id="cerrarModalAcerca" class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      <button type="button" class="btn-primary" (click)="guardarAcerca()">Guardar</button>
-    </div>
-  </div>
 </div>
-</div>         
-            </div>     
-          </div>
-        </div>
-        </div>
+<div class="col-2">
+<h5 id="estudios">{{item.school }}</h5>
+<p>{{item.title }}</p>
+<p>{{item.start}} - {{item.end }}</p>
+</div>
+<div class="col-1" style="margin-top: 4rem;" >
 
+<button *ngIf="usuarioAutenticado" class="button-addon2"
+data-bs-toggle="modal" data-bs-target="#modalAcerca" style="width:6rem
+; margin-left:15rem" (click)="mostrarAcerca(item.id)">
 
-        <div class="col-12 col-md-4 col-lg-4" style="background-color: #0b96dc;">
-         
-        <div class="card referencia" style="width: 18rem;">
-          <div class="card-body">
- 
-            <h5 class="card-title">Soledad Rojas</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Profesora & Desarrolladora</h6>
-            <p class="card-text">Óptimo manejo de los lenguajes de programacion y capacidad integradora.
-            </p>
-            <button class="btn-primary">Editar Referencia</button>
-          </div>
-        </div>
-        <div class="card referencia" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Shona Garcia</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Licenciada en Educación</h6>
-            <p class="card-text">Una profesional, comprometida, responsable en el desarrollo de sus tareas
-            </p>
-            <button class="btn-primary">Editar Referencia</button>
-          </div>
-        </div>
-        <div class="card referencia" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Arturo Shellman</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Profesor de Ingles</h6>
-            <p class="card-text">Gran manejo del idioma de manera oral y escrita, se desenvuelve optimamente de manera coloquial y técnica.
-            </p>
-            <button class="btn-primary">Editar Referencia</button>
-          </div>
-        </div>
-        </div>
+Editar</button>
 
+<div class="modal fade" id="modalAcerca" tabindex="-1"
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Editar
+Acerca</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"
+aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<form [formGroup]="form">
+<div class="mb-3">
+<label for="school" class="form-label">Centro de
 
+Estudio</label>
 
+<input type="text" class="form-control" id="school"
 
+formControlName="school" >
 
+<div *ngIf="school?.invalid && school?.touched">
+<div *ngIf="school?.errors?.['required']"
 
-        <div class="col-12 col-md-4 col-lg-4" style="background-color: #663399;">
-        <div class="col barrasanimadas">
-          <div class="contenedor">
-            <div class="habilidades">
-              <h2>Habilidades en Programación</h2>
-              <h4>HTML</h4>
-              <div class="barra">
-                <div class="progreso" style="--w:80%">80%</div>
-              </div>
-        
-              <div class="habilidades">
-                <h4>CSS</h4>
-                <div class="barra">
-                  <div class="progreso" style="--w:70%">70%</div>
-                </div>
-              </div>
-              <div class="habilidades">
-                <h4>JavaScrip</h4>
-                <div class="barra">
-                  <div class="progreso" style="--w:70%">70%</div>
-                </div>
-              </div>
-              <div class="habilidades">
-                <h4>SQL</h4>
-                <div class="barra">
-                  <div class="progreso" style="--w:60%">60%</div>
-                </div>
-                 <!-- Modal 
-                <br><br><br><br>
-                
-                <button *ngIf="usuarioAutenticado" class="button-addon2" data-bs-toggle="modal" data-bs-target="#modalAcerca">
-                  Editar Acerca</button>
-                  -- Modal 
-<div class="modal fade" id="modalAcerca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar  Acerca</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form [formGroup]="form">
+class="text-danger">
 
-          <div class="mb-3">
-            <label for="school" class="form-label">Centro de Estudio</label>
-            <input type="text" class="form-control" id="school" formControlName="school"  >
-            <div *ngIf="school?.invalid && school?.touched">
-              <div *ngIf="school?.errors?.['required']" class="text-danger">
-                 Estudio requerido.
-              </div>
-              <div *ngIf="school?.errors?.['minlength']"class="text-danger" >
-                  El Estudio requerido debe tener un mínimo de 5 caracteres.
-              </div>
-          </div>
-          </div>
+Estudio requerido.
+</div>
+<div
 
-          <div class="mb-3">
-            <label for="title" class="form-label">Título</label>
-            <input type="text" class="form-control" id="title" formControlName="title">
-          </div>
+*ngIf="school?.errors?.['minlength']"class="text-danger" >
+El Estudio requerido debe tener un mínimo de 5
 
-          <div class="mb-3">
-            <label for="start" class="form-label">Año de Ingreso</label>
-            <input type="number" class="form-control" id="start" formControlName="start">
-          </div>
-          <div class="mb-3">
-            <label for="end" class="form-label">Año de Egreso</label>
-            <input type="number" class="form-control" id="end" formControlName="end">
-          </div>
+caracteres.
+</div>
+</div>
+</div>
+<div class="mb-3">
+<label for="title" class="form-label">Título</label>
+<input type="text" class="form-control" id="title"
 
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="cerrarModalAcerca" class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn-primary" (click)="guardarAcerca()">Guardar</button>
-      </div>
-    </div>
-  </div>
+formControlName="title">
+</div>
+<div class="mb-3">
+
+<label for="start" class="form-label">Año de Ingreso</label>
+<input type="number" class="form-control" id="start"
+
+formControlName="start">
+</div>
+<div class="mb-3">
+<label for="end" class="form-label">Año de Egreso</label>
+<input type="number" class="form-control" id="end"
+
+formControlName="end">
+</div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" id="cerrarModalAcerca"
+class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+<button type="button" class="btn-primary"
+(click)="guardarAcerca()">Guardar</button>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4 col-lg-4" style="background-color:
+
+#0b96dc;">
+
+<div class="card referencia" style="width: 18rem;">
+<div class="card-body">
+<h5 class="card-title">Soledad Rojas</h5>
+<h6 class="card-subtitle mb-2 text-muted">Profesora &
+
+Desarrolladora</h6>
+
+<p class="card-text">Óptimo manejo de los lenguajes de
+
+programacion y capacidad integradora.
+
+</p>
+<button class="btn-primary">Editar Referencia</button>
+</div>
+</div>
+<div class="card referencia" style="width: 18rem;">
+
+<div class="card-body">
+<h5 class="card-title">Shona Garcia</h5>
+<h6 class="card-subtitle mb-2 text-muted">Licenciada en
+
+Educación</h6>
+
+<p class="card-text">Una profesional, comprometida,
+
+responsable en el desarrollo de sus tareas
+
+</p>
+<button class="btn-primary">Editar Referencia</button>
+</div>
+</div>
+<div class="card referencia" style="width: 18rem;">
+<div class="card-body">
+<h5 class="card-title">Arturo Shellman</h5>
+<h6 class="card-subtitle mb-2 text-muted">Profesor de
+
+Ingles</h6>
+
+<p class="card-text">Gran manejo del idioma de manera oral
+y escrita, se desenvuelve optimamente de manera coloquial y técnica.
+
+</p>
+<button class="btn-primary">Editar Referencia</button>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4 col-lg-4" style="background-color:
+
+#663399;">
+
+<div class="col barrasanimadas">
+<div class="contenedor">
+<div class="habilidades">
+<h2>Habilidades en Programación</h2>
+<h4>HTML</h4>
+<div class="barra">
+<div class="progreso" style="--w:80%">80%</div>
+</div>
+<div class="habilidades">
+<h4>CSS</h4>
+<div class="barra">
+<div class="progreso" style="--w:70%">70%</div>
+
+</div>
+</div>
+<div class="habilidades">
+<h4>JavaScrip</h4>
+<div class="barra">
+<div class="progreso" style="--w:70%">70%</div>
+</div>
+</div>
+<div class="habilidades">
+<h4>SQL</h4>
+<div class="barra">
+<div class="progreso" style="--w:60%">60%</div>
+</div>
+<!-- Modal
+<br><br><br><br>
+<button *ngIf="usuarioAutenticado"
+class="button-addon2" data-bs-toggle="modal"
+data-bs-target="#modalAcerca">
+
+Editar Acerca</button>
+-- Modal
+
+<div class="modal fade" id="modalAcerca" tabindex="-1"
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Editar
+
+Acerca</h5>
+
+<button type="button" class="btn-close" data-bs-dismiss="modal"
+
+aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<form [formGroup]="form">
+<div class="mb-3">
+<label for="school" class="form-label">Centro de
+
+Estudio</label>
+
+<input type="text" class="form-control" id="school"
+
+formControlName="school" >
+
+<div *ngIf="school?.invalid && school?.touched">
+<div *ngIf="school?.errors?.['required']"
+
+class="text-danger">
+
+Estudio requerido.
+
+</div>
+<div
+
+*ngIf="school?.errors?.['minlength']"class="text-danger" >
+El Estudio requerido debe tener un mínimo de 5
+
+caracteres.
+
+</div>
+</div>
+</div>
+<div class="mb-3">
+<label for="title" class="form-label">Título</label>
+<input type="text" class="form-control" id="title"
+
+formControlName="title">
+
+</div>
+<div class="mb-3">
+<label for="start" class="form-label">Año de
+
+Ingreso</label>
+
+<input type="number" class="form-control" id="start"
+
+formControlName="start">
+
+</div>
+<div class="mb-3">
+<label for="end" class="form-label">Año de Egreso</label>
+<input type="number" class="form-control" id="end"
+
+formControlName="end">
+</div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" id="cerrarModalAcerca"
+
+class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+<button type="button" class="btn-primary"
+(click)="guardarAcerca()">Guardar</button>
+</div>
+</div>
+</div>
 </div>
 -- Modal -->
-              </div>
-            </div> 
-          </div>
-        </div>
-        </div>
-    </div>
-    </div>
-  </section>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
