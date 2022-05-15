@@ -13,6 +13,10 @@ export class ProyectosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.miProyecto.obtenerDatosProyectos().subscribe(data=> {
+      console.log(data);
+      this.trabajos=data["proyectos"];
+    });
   }
 
 }

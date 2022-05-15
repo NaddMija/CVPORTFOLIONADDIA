@@ -1,7 +1,7 @@
 <section id="proyectos">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-12 col-md-4 col-lg-4" style="background-color: #f0eb95;">
+    <div class="row" >
+      <div *ngFor="let item of trabajos" class="col-4" style="background-color: #f0eb95;">
       <div class="Poryectos">
         <br>
         <br>
@@ -12,13 +12,11 @@
        <br>
        <br>
        <br>
-    <div class="card" style="width: 25rem;">
-      <img src="assets/portfolio-4.jpg" alt="proyecto 1">
+    <div class="card" style="width: 20rem;">
+      <img [src]="item.cardimg" alt="proyecto 1">
       <div class="card-body">
-        <h5 class="card-title">Diseño Gràfico</h5>
-        <p class="card-text">Podemos crear la identidad corporativa de tu empresa. Diseño , Maquetación de folletos, Catálogos, Papelería
-          y
-          mucho más.</p>
+        <h5 class="card-title">{{item.cardtit}}</h5>
+        <p class="card-text">{{item.cardtext}}</p>
           <a href="https://platzi.com/diseno-grafico/">Leer Màs</a>
           <button class="icono-btn btn-primary" style="margin-left: 15rem;">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
